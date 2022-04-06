@@ -10,15 +10,24 @@ h2,h3,p{
     margin: 0;
     padding: 0;
 }
+h3{
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
 
-@mixin button {
-    width: 207px;
+@mixin button($width, $bg ) {
+    width: $width;
     height: 52px;
-    background: $color-primary;
+    background: $bg;
     font-family: $font;
     line-height: 22.1px;
     font-size: 17px;
     border-radius: 100px;
+    border: none;
 }
 body{
     margin: 0;
@@ -105,7 +114,7 @@ header, section{
                 margin: 0;
             }
             button{
-                @include button();
+                @include button(207px, $color-primary);
             }
             img{
                 display: block;
@@ -153,6 +162,7 @@ header, section{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        row-gap: 60px;
         h3{
             font-family: Georgia;
             font-size: 35px;
@@ -163,8 +173,71 @@ header, section{
         }
         .slider{
             display: flex;
+            width: 100%;
             justify-content: space-between;
+            column-gap: 53px;
+            align-items: center;
+            button{
+                width: 52px;
+                height: 52px;
+                border-radius: 100%;
+                border: solid 2px $color-primary;
+                flex-shrink: 0;
+            }
+            .slider-field{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .pet-card{
+                    height: 435px;
+                    background: #FAFAFA;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+                    align-items: center;
+                    p{
+                        font-family: Georgia;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 23px;
+                        letter-spacing: 0.06em;
+                        text-align: center;
+                    }
+                    button{
+                        @include button(187px, white);
+                        border: 2px solid $color-primary;
+                    }
+                }
+            }
             
+        }
+        button{
+            @include button(261px, $color-primary)
+        }
+    }
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    .help-container{
+        display: flex;
+        column-gap: 120px;
+        row-gap: 55px;
+        flex-wrap: wrap;
+        justify-content: center;
+        p{
+            margin-top: 25px;
+            font-family: Georgia;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0.06em;
+            text-align: center;
+        }
+        .help-item{
+            text-align: center;
         }
     }
 }
