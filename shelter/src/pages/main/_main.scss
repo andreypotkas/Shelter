@@ -6,6 +6,7 @@ $color-primary: #F1CDB3;
 $color-light-s: #FAFAFA;
 $font: Georgia;
 $color-dark-s: #CDCDCD;
+
 h2,h3,p{
     margin: 0;
     padding: 0;
@@ -33,7 +34,7 @@ body{
     margin: 0;
     padding: 0;
 }
-header, section{
+header, section, footer{
     width: 1280px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -239,5 +240,108 @@ header, section{
         .help-item{
             text-align: center;
         }
+    }
+}
+
+.wrapper-donation{
+    background: #F6F6F6;
+    section{
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        .donation-description{
+            height: 282px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3{
+                text-align: left;
+            }
+            p{
+                font-family: Georgia;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0.06em;
+                text-align: left;
+            }
+            .credit-card-description{
+                font-family: Arial;
+                font-size: 12px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0px;
+                text-align: left;
+                color: #B2B2B2;
+            }
+            .credit-card{
+                background: #F1CDB3;
+                border-radius: 9px;
+                height: 43px;
+                display: flex;
+                .credit-card-icon{
+                    font-family: 'Material Icons';
+                    font-size: 32px;
+                    line-height: 42px;
+                    padding: 0 10px;
+                }
+                .credit-card-number{//styleName: h4;
+                    font-family: Georgia;
+                    font-size: 20px;
+                    font-weight: 400;
+                    letter-spacing: 0.06em;
+                    text-align: left;
+                    line-height: 43px;
+                }
+            }
+        }
+    }
+}
+
+.wrapper-footer{
+    background: $background-header;
+    footer{
+        background: url('assets/images/1280/start-screen-background.jpg');
+        background-repeat: no-repeat;
+        padding: 40px 40px 0;
+        display: flex;
+        justify-content: space-between;
+            h3{
+                color:white;
+                text-align: left;
+            }
+            p{
+                color: $color-primary;
+                line-height: 32px;
+                font-family: Georgia;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: 0.06em;
+                text-align: left;
+            }
+            span{
+                font-family: 'Material Icons';
+                font-size: 32px;
+            }
+            .phone-email-contacts, .adress{
+                height: 234px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 16px;
+            }
+            .email-wrapper, .phone-wrapper, .address-wrapper{
+                display: flex;
+                flex-direction: row;
+                column-gap: 20px;
+            }
+            .address-wrapper{
+                img{
+                    width: 22px;
+                    height: 32px;
+                }
+            }
     }
 }
