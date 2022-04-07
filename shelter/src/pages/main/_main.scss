@@ -7,6 +7,9 @@ $color-light-s: #FAFAFA;
 $font: Georgia;
 $color-dark-s: #CDCDCD;
 
+a{
+    text-decoration: none;
+}
 h2,h3,p{
     margin: 0;
     padding: 0;
@@ -32,6 +35,7 @@ h3{
     &:hover{
         background: white;
         border: 3px solid $bg;
+        cursor: pointer;
     }
 }
 body{
