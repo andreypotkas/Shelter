@@ -1,0 +1,194 @@
+
+h2,h3,p, body{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+header, section, footer{
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 80px 40px 100px;
+}
+.wrapper-footer {
+    background: #292929;
+  }
+  .wrapper-footer footer {
+    background: url("../../assets/images/1280/start-screen-background.jpg");
+    background-repeat: no-repeat;
+    padding: 40px 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper-footer footer h3 {
+    color: white;
+    text-align: left;
+  }
+  .wrapper-footer footer p {
+    line-height: 32px;
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
+  .wrapper-footer footer span {
+    font-family: "Material Icons";
+    font-size: 32px;
+  }
+  .wrapper-footer footer .phone-email-contacts, .wrapper-footer footer .adress {
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  .wrapper-footer footer .email-wrapper, .wrapper-footer footer .phone-wrapper, .wrapper-footer footer .address-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .wrapper-footer footer .address-wrapper img {
+    width: 22px;
+    height: 32px;
+  }
+
+  header {
+    height: 120px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .header-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header .header-logo h1, header .header-logo p {
+    margin: 0;
+  }
+  header .header-logo h1 {
+    font-family: Georgia;
+    font-weight: 400;
+  }
+  h1{
+      letter-spacing: 2px;
+      word-spacing: 0px;
+  }
+  header .header-logo p {
+    letter-spacing: 1px;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 35px;
+    align-items: center;
+  }
+  header nav a {
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  header nav a.active {
+    border-bottom: 3px solid pink;
+  }
+
+  .wrapper-friends {
+    background: #F6F6F6;
+  }
+  .wrapper-friends .friends {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 60px;
+  }
+  .wrapper-friends .friends h3 {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .wrapper-friends .friends .slider {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 53px;
+    align-items: center;
+  }
+  .wrapper-friends .friends .pagination button {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    border: solid 2px #F1CDB3;
+    flex-shrink: 0;
+    background: none;
+    font-size: 32px;
+  }
+  .wrapper-friends .friends .pagination {
+    display: flex;
+    column-gap: 20px;
+  }
+  .wrapper-friends .friends .pagination button.number-page {
+    background: #F1CDB3;
+  }
+  .wrapper-friends .friends .slider .slider-field {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    row-gap: 30px;
+    column-gap: 40px;
+  }
+  .wrapper-friends .friends .slider .slider-field .pet-card {
+    height: 435px;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .wrapper-friends .friends .slider .slider-field .pet-card p {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .wrapper-friends .friends .slider .slider-field .pet-card button {
+    width: 187px;
+    height: 52px;
+    background: white;
+    font-family: "Georgia";
+    line-height: 22.1px;
+    font-size: 17px;
+    border-radius: 100px;
+    border: none;
+    border: 2px solid pink;
+  }
+  .wrapper-friends .friends button {
+    width: 261px;
+    height: 52px;
+    background: pink;
+    font-family: "Georgia";
+    line-height: 22.1px;
+    font-size: 17px;
+    border-radius: 100px;
+    border: none;
+  }

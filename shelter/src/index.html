@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <title>Shelter</title>
+    <title>Cozy house</title>
 </head>
 <body>
     <div class="wrapper-header-welcome">
@@ -18,9 +18,9 @@
                 </div>
                 <nav>
                     <a href="" class="active" class="nav-link">About the shelter</a>
-                    <a href="" class="nav-link">Our pets</a>
-                    <a href="" class="nav-link">Help the shelter</a>
-                    <a href="" class="nav-link">Contacts</a>
+                    <a href="./pages/pets/index.html" class="nav-link">Our pets</a>
+                    <a href="#help" class="nav-link">Help the shelter</a>
+                    <a href="#contacts" class="nav-link">Contacts</a>
                 </nav>
             </header>
             <section class="welcome">
@@ -29,7 +29,7 @@
                     <p>
                         We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
                     </p>
-                    <button>Make a friend</button>
+                    <a href="#friends"><button>Make a friend</button></a>
                 </div>
                 
                     <img src="./assets/images/1280/start-screen-puppy.png" alt="welcome-foto">
@@ -55,7 +55,7 @@
     
         </div>
     </section>
-    <div class="wrapper-friends">
+    <div id="friends" class="wrapper-friends">
         <section class="friends">
             <h3>Our friends who<br> are looking for a house</h3>
             <div class="slider">
@@ -85,10 +85,10 @@
                 </div>
                 <button>&#8594;</button>
             </div>
-            <button>Get to know the rest</button>
+            <a href="./pages/pets/index.html"><button>Get to know the rest</button></a>
         </section>
     </div>
-    <section class="help">
+    <section id="help" class="help">
         <h3>How you can help<br>
             our shelter</h3>
             <div class="help-container">
@@ -141,7 +141,7 @@
                 <p>Name of the bank / Type of bank account</p>
                 <div class="credit-card">
                     <p class="credit-card-icon">credit_card</p>
-                    <p class="credit-card-number">8380 2880 8028 8791 7435</p>
+                    <a><p class="credit-card-number">8380 2880 8028 8791 7435</p></a>
                 </div>
                 <p class="credit-card-description">Legal information and lorem ipsum dolor sit amet, consectetur<br>
                 adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac<br>
@@ -151,7 +151,7 @@
         </section>
     </div>
 
-    <div class="wrapper-footer">
+    <div id="contacts" class="wrapper-footer">
         <footer>
             <div class="phone-email-contacts">
                 <h3>For questions<br> and suggestions</h3>

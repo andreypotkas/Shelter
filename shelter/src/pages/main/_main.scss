@@ -29,6 +29,10 @@ h3{
     font-size: 17px;
     border-radius: 100px;
     border: none;
+    &:hover{
+        background: white;
+        border: 3px solid $bg;
+    }
 }
 body{
     margin: 0;
@@ -116,6 +120,9 @@ header, section, footer{
             }
             button{
                 @include button(207px, $color-primary);
+                a{
+                    text-decoration: none;
+                }
             }
             img{
                 display: block;
@@ -196,6 +203,12 @@ header, section, footer{
                     flex-direction: column;
                     row-gap: 30px;
                     align-items: center;
+                    &:hover{
+                        button{
+                            background: #F1CDB3;
+                        }
+                        cursor: pointer;
+                    }
                     p{
                         font-family: Georgia;
                         font-size: 20px;
