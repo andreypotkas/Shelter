@@ -1,5 +1,5 @@
 
-h2,h3,p, body{
+h2, h3, p, body{
     margin: 0;
     padding: 0;
 }
@@ -70,6 +70,7 @@ header, section, footer{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 16px;
+    color: #F1CDB3;
   }
   .wrapper-footer footer .email-wrapper, .wrapper-footer footer .phone-wrapper, .wrapper-footer footer .address-wrapper {
     display: flex;
@@ -181,11 +182,9 @@ header, section, footer{
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
-    
   }
   .wrapper-friends .friends .slider .slider-field .pet-card :hover {
     cursor: pointer;
-    
   }
   .wrapper-friends .friends .slider .slider-field .pet-card p {
     font-family: Georgia;
@@ -204,8 +203,9 @@ header, section, footer{
     font-size: 17px;
     border-radius: 100px;
     border: none;
-    border: 2px solid pink;
+    border: 2px solid #F1CDB3;
   }
+  
   .wrapper-friends .friends button {
     width: 261px;
     height: 52px;
@@ -215,4 +215,23 @@ header, section, footer{
     font-size: 17px;
     border-radius: 100px;
     border: none;
+  }
+
+  .wrapper-friends .friends .slider .slider-field .pet-card:hover button{
+    background: #F1CDB3;
+    cursor: pointer;
+  }
+  .wrapper-friends .friends .slider .slider-field .pet-card button:hover{
+    background: #F1CDB3;
+    cursor: pointer;
+  }
+
+  .wrapper-friends .friends .pagination button:hover {
+    background: #F1CDB3;
+    cursor: pointer;
+  }
+
+  .wrapper-friends .friends .pagination button:disabled:hover {
+    background: none;
+    cursor: auto;
   }
