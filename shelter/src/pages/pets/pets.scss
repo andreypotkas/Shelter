@@ -89,9 +89,11 @@ header, section, footer{
             button{
                 width: 32px;
                 height: 32px;
-                background: url('../../assets/320/BurgerBlack.png');
-                background-repeat: no-repeat;
                 border: none;
+                font-family: 'Material Icons';
+                background: none;
+                color: black;
+                font-size: 42px;
             }
         }
         nav{
@@ -320,8 +322,7 @@ header, section, footer{
     .wrapper-bg{
         header{
             padding: 30px 10px;
-            column-gap: 38px;
-            justify-content: start;
+            justify-content: space-between;
             a{
                 padding-left: 10px;
             }
@@ -332,6 +333,7 @@ header, section, footer{
                 display: none;
             }
             .menu-btn{
+                padding-right: 55px;
                 display: flex;
                 align-items: center;
             }

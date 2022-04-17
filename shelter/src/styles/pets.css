@@ -88,9 +88,11 @@ header, section, footer {
 .wrapper-bg header .menu-btn button {
   width: 32px;
   height: 32px;
-  background: url("../../assets/320/BurgerBlack.png");
-  background-repeat: no-repeat;
   border: none;
+  font-family: 'Material Icons';
+  background: none;
+  color: black;
+  font-size: 42px;
 }
 
 .wrapper-bg header nav {
@@ -412,11 +414,9 @@ header, section, footer {
 @media (max-width: 768px) {
   .wrapper-bg header {
     padding: 30px 10px;
-    -webkit-column-gap: 38px;
-            column-gap: 38px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .wrapper-bg header a {
     padding-left: 10px;
@@ -428,6 +428,7 @@ header, section, footer {
     display: none;
   }
   .wrapper-bg header .menu-btn {
+    padding-right: 55px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

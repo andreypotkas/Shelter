@@ -82,13 +82,17 @@ header, section, footer{
         }
         .menu-btn{
             display: none;
-            padding-right: 53px;
+            padding-right: 65px;
+            display: flex;
+            align-items: center;
             button{
                 width: 32px;
                 height: 32px;
-                background: url('./assets/320/Burger.png');
-                background-repeat: no-repeat;
                 border: none;
+                font-family: 'Material Icons';
+                background: none;
+                color: $color-primary;
+                font-size: 42px;
             }
         }
         nav{
@@ -527,10 +531,6 @@ header, section, footer{
             nav{
                 display: none;
             }
-            .menu-btn{
-                display: flex;
-                align-items: center;
-            }
         }
     
         .welcome{
@@ -782,6 +782,7 @@ header, section, footer{
                     text-align: center;
                 }
                 .address-wrapper{
+                    justify-content: center;
                     align-items: center;
                     width: 100%;
                     column-gap: 20px;
