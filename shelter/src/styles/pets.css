@@ -1,0 +1,314 @@
+a {
+  text-decoration: none;
+}
+
+h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header, section, footer {
+  width: 1280px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 80px 40px 100px;
+}
+
+.wrapper-bg {
+  background: white;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.wrapper-bg header {
+  height: 120px;
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper-bg header .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper-bg header .header-logo h1 {
+  margin: 0;
+  font-family: Georgia;
+  font-weight: 400;
+  color: black;
+  word-spacing: 13px;
+}
+
+.wrapper-bg header .header-logo p {
+  margin: 0;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.wrapper-bg header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 35px;
+          column-gap: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-bg header nav a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper-bg header nav a.active {
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.wrapper-friends {
+  background: #F6F6F6;
+}
+
+.wrapper-friends .friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 60px;
+}
+
+.wrapper-friends .friends h3 {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.wrapper-friends .friends .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 53px;
+          column-gap: 53px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-friends .friends .slider .slider-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card {
+  height: 435px;
+  background: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card:hover {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.055);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.055);
+  cursor: pointer;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card:hover button {
+  background: #F1CDB3;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card button {
+  width: 187px;
+  height: 52px;
+  background: white;
+  font-family: Georgia;
+  line-height: 22.1px;
+  font-size: 17px;
+  border-radius: 100px;
+  border: none;
+  border: 2px solid #F1CDB3;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card button:hover {
+  background: white;
+  border: 3px solid white;
+  cursor: pointer;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card button:hover {
+  border: 2px solid #F1CDB3;
+  background: #F1CDB3;
+}
+
+.wrapper-friends .friends .slider .slider-field .pet-card p {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.wrapper-friends .friends .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.wrapper-friends .friends .pagination button {
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  border: solid 2px #F1CDB3;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.wrapper-friends .friends .pagination button:hover {
+  background: #F1CDB3;
+  cursor: pointer;
+}
+
+.wrapper-friends .friends .pagination button:hover:disabled {
+  background: none;
+  cursor: auto;
+}
+
+.wrapper-friends .friends .pagination .number-page {
+  background: #F1CDB3;
+}
+
+.wrapper-footer {
+  background: #292929;
+}
+
+.wrapper-footer footer {
+  background: url("assets/images/1280/start-screen-background.jpg");
+  background-repeat: no-repeat;
+  padding: 40px 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper-footer footer h3 {
+  color: white;
+  text-align: left;
+}
+
+.wrapper-footer footer p {
+  color: #F1CDB3;
+  line-height: 32px;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.wrapper-footer footer span {
+  font-family: 'Material Icons';
+  font-size: 32px;
+}
+
+.wrapper-footer footer .phone-email-contacts, .wrapper-footer footer .adress {
+  height: 234px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+}
+
+.wrapper-footer footer .email-wrapper, .wrapper-footer footer .phone-wrapper, .wrapper-footer footer .address-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.wrapper-footer footer .address-wrapper img {
+  width: 22px;
+  height: 32px;
+}
