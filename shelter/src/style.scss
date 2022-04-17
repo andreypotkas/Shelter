@@ -105,13 +105,15 @@ header, section, footer{
                 line-height: 24px;
                 letter-spacing: 0px;
                 text-align: left;
+                &:hover{
+                    border-bottom: 3px solid $color-primary;
+                }
             }
             a.active{
                 border-bottom: 3px solid $color-primary;
             }
         }
     }
-
     .welcome{
         display: flex;
         column-gap: 42px;
@@ -123,7 +125,7 @@ header, section, footer{
             flex-direction: column;
             justify-content: space-between;
             flex-grow: 0;
-            h3{//styleName: h2;
+            h3{
                 font-family: Georgia;
                 font-size: 44px;
                 font-weight: 400;
@@ -169,13 +171,7 @@ header, section, footer{
         flex-direction: column;
         justify-content: space-between;
         h3{
-            font-family: Georgia;
-            font-size: 35px;
-            font-weight: 400;
-            line-height: 45px;
-            letter-spacing: 0.06em;
             text-align: left;
-            margin: 0;
         }
         p{
             font-family: Arial;
@@ -198,11 +194,6 @@ header, section, footer{
         align-items: center;
         row-gap: 60px;
         h3{
-            font-family: Georgia;
-            font-size: 35px;
-            font-weight: 400;
-            line-height: 45px;
-            letter-spacing: 0.06em;
             text-align: center;
         }
         .slider{
@@ -406,14 +397,11 @@ header, section, footer{
         padding: 80px 30px 100px;
     }
     .wrapper-header-welcome{
-        background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
         header{
             height: 120px;
             padding: 30px;
         }
-    
         .welcome{
-            display: flex;
             flex-direction: column;
             row-gap: 100px;
             padding: 30px 100px 0;
@@ -423,9 +411,6 @@ header, section, footer{
                 max-width: 460px;
                 padding: 0 55px;
                 margin-top: 0;
-                p{
-                    flex-shrink: 1;
-                }
                 a{
                     text-align: center;
                 }
@@ -488,9 +473,7 @@ header, section, footer{
     }
     
     .wrapper-donation{
-        background: #F6F6F6;
         section{
-            display: flex;
             flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
@@ -499,7 +482,6 @@ header, section, footer{
             .donation-description{
                 height: 282px;
                 flex-shrink: 0;
-                display: flex;
                 flex-direction: column;
                 text-align: left;
                 h3{
@@ -510,23 +492,18 @@ header, section, footer{
     }
     
     .wrapper-footer{
-        
         footer{
             padding: 30px 40px 0;
-            display: flex;
             justify-content: center;
             flex-wrap: wrap;
             column-gap: 60px;
             row-gap: 65px;
                 .phone-email-contacts, .adress{
                     height: 234px;
-                    display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     margin-top: 0;
                 }
-                
-                
                 .footer-foto{
                     flex: 100% 1 1;
                 }
@@ -539,12 +516,9 @@ header, section, footer{
         padding: 42px 10px;
     }
     h3{
-        font-family: Georgia;
         font-size: 25px;
-        font-weight: 400;
         line-height: 32px;
         letter-spacing: 0.06em;
-        text-align: center;
     }
     .wrapper-header-welcome{
         header{
@@ -600,7 +574,6 @@ header, section, footer{
     }
     
     .about{
-        display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -608,7 +581,6 @@ header, section, footer{
         .about-img{
             img{
                 width: 260px;
-                
             }
         }
         .about-description{
@@ -616,36 +588,20 @@ header, section, footer{
             width: auto;
             height: auto;
             h3{
-                font-family: Georgia;
-                font-size: 25px;
-                font-weight: 400;
-                line-height: 32px;
-                letter-spacing: 0.06em;
                 text-align: center;
             }
             p{
                 padding: 0 15px;
-                font-family: Arial;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0px;
-                text-align: justified;
+                text-align: justify;
             }
             
         }
     }
     
     .wrapper-friends{
-        background: #F6F6F6;
         .friends{
             row-gap: 42px;
             h3{
-                font-family: Georgia;
-                font-size: 25px;
-                font-weight: 400;
-                line-height: 32px;
-                letter-spacing: 0.06em;
                 text-align: center;
             }
             .slider{
@@ -677,7 +633,6 @@ header, section, footer{
     }
     
     .help{
-        display: flex;
         flex-direction: column;
         row-gap: 42px;
         .help-container{
@@ -795,53 +750,50 @@ header, section, footer{
             justify-content: center;
             column-gap: 60px;
             row-gap: 40px;
+
             h3{
                 text-align: center;
                 br{
                     display: none;
                 }
             }
-                .phone-email-contacts, .adress{
-                    flex-basis: 100%;
-                    height: auto;
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 40px;
-                    align-items: center;
-                    margin-top: 0;
-                    a{//styleName: h4;
-                        p{
-                        font-family: Georgia;
-                        font-size: 20px;
-                        font-weight: 400;
-                        line-height: 23px;
-                        letter-spacing: 0.06em;
-                        text-align: left;
-                        }
-                        
-                        
+            .phone-email-contacts, .adress{
+                flex-basis: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                row-gap: 40px;
+                align-items: center;
+                margin-top: 0;
+                a{
+                    p{
+                    font-family: Georgia;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    letter-spacing: 0.06em;
+                    text-align: left;
                     }
                 }
-                .adress{
-                    h3{
-                        width: 270px;
-                        text-align: center;
-                    }
-                    .address-wrapper{
-                        align-items: center;
-                        width: 100%;
-                        justify-content: center;
-                    }
-                }
-                .img-container{
+            }
+            .adress{
+                h3{
+                    width: 270px;
                     text-align: center;
-                    .footer-foto{
-                        flex: 100% 1 1;
-                        width: 260px;
-                        top: 0;
-                    }
                 }
-                
+                .address-wrapper{
+                    align-items: center;
+                    width: 100%;
+                    column-gap: 20px;
+                }
+            }
+            .img-container{
+                text-align: center;
+                .footer-foto{
+                    flex: 100% 1 1;
+                    width: 260px;
+                }
+            }    
         }
     }
 }
