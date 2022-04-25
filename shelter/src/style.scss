@@ -1,3 +1,5 @@
+@import './pages/pets/pets.scss';
+
 $header-padding-main: 60px 40px;
 $welcome-padding: 0 40px;
 $section-padding-1280: 80px 40px 100px;
@@ -5,8 +7,82 @@ $color-primary: #F1CDB3;
 $color-light-s: #FAFAFA;
 $font: Georgia;
 $color-dark-s: #CDCDCD;
+.animation-left-show{
+    position: relative;
+    animation: form-show 1s forwards;
+    @keyframes form-show {
+        from {left: -1500px}
+        to {left: 0}
+     }
+}
+.animation-left-hide{
+    position: relative;
+    animation: form-hide 1s forwards;
+    @keyframes form-hide {
+        from {left: 0}
+        to {left: -1500px}
+     }
+}
+.animation-right-show{
+    position: relative;
+    animation: form-show 1s forwards;
+    @keyframes form-show {
+        from {right: 1500px}
+        to {right: 0}
+     }
+}
+.animation-right-hide{
+    position: relative;
+    animation: form-hide 1s forwards;
+    @keyframes form-hide {
+        from {right: 0}
+        to {right: -1500px}
+     }
+}
 
-
+.pet-card-popup{
+    z-index: 3;
+    position: absolute;
+    max-width: 952px;
+    height: 552px;
+    display: flex;
+    flex-direction: row-reverse;
+    .close-card{
+        position: relative;
+        .close-card-btn{
+            width: 52px;
+            height: 52px;
+            border-radius: 100%;
+            border: $color-primary 2px solid;
+            background: white;
+            position: absolute;
+            top: -50px;
+            &:hover{
+                background: $color-primary;
+            }
+        }
+    }
+    .card-content{
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        .card-img{
+            flex: 55% 1 1;
+            
+            img{
+                min-width: 100%;
+            }
+        }
+        .card-description{
+            padding: 50px 20px 0;
+            flex: 45% 1 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 40px;
+        }
+    }
+}
 h2,h3,p,h1,body{
     margin: 0;
     padding: 0;
@@ -82,16 +158,18 @@ header, section, footer{
         }
         .menu-btn{
             display: none;
-            padding-right: 65px;
+            padding-right: 35px;
             align-items: center;
+            padding-left: 30px;
             button{
-                width: 32px;
-                height: 32px;
+                width: 42px;
+                height: 42px;
                 border: none;
                 font-family: 'Material Icons';
                 background: none;
                 color: $color-primary;
                 font-size: 42px;
+                
             }
         }
         nav{
@@ -116,6 +194,9 @@ header, section, footer{
                 border-bottom: 3px solid $color-primary;
             }
         }
+    }
+    .main{
+        background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     }
     .welcome{
         display: flex;
@@ -396,6 +477,15 @@ header, section, footer{
 }
 
 @media (max-width: 1280px) {
+    .pet-card-popup{
+        width: 682px;
+        height: 410px;
+        .card-content{
+            .card-description{
+                row-gap: 10px;
+            }
+        }
+    }
     section{
         padding: 80px 30px 100px;
     }
@@ -515,6 +605,17 @@ header, section, footer{
 }
 
 @media (max-width: 768px) {
+    .pet-card-popup{
+        width: 270px;
+        .card-content{
+            .card-img{
+                display:none;
+            }
+            .card-description{
+                row-gap: 10px;
+            }
+        }
+    }
     section{
         padding: 42px 10px;
     }
@@ -527,11 +628,39 @@ header, section, footer{
         header{
             height: 150px;
             padding: 30px 0 60px 10px;
+            .header-logo{
+                z-index: 3;
+            }
             .menu-btn{
                 display: flex;
+                z-index: 3;
+                button{
+                    transition: transform 1s;
+                    padding: 0;
+                }
             }
             nav{
-                display: none;
+                padding-top: 150px;
+                background: #292929;
+                height: 100%;
+                flex-direction: column;
+                position: absolute;
+                z-index: 2;
+                top: -120%;
+                right: 0;
+                width: 320px;
+                transition: 1s;
+            }
+            .show-nav{
+                display: flex;
+                top: 0;
+                justify-content: start !important;
+                row-gap: 30px;
+            }
+
+            .burger-rotate{
+                transition: transform 1s;
+                transform: rotate(90deg);
             }
         }
     
@@ -800,3 +929,13 @@ header, section, footer{
         }
     }
 }
+
+.stop-scroll{
+        min-width: 100vw;
+        min-height: 100%;
+        overflow: hidden;
+        background: rgba(41, 41, 41, 0.6);
+        z-index: 2;
+        position: absolute;
+}
+

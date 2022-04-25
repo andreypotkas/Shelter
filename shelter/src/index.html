@@ -9,8 +9,9 @@
     <title>Cozy house</title>
 </head>
 <body>
+    <div id="wrap"></div>
     <div class="wrapper-header-welcome">
-        <div class="wrapper-bg">
+        <div class="wrapper-bg main">
             <header>
                 <div class="header-logo">
                     <h1>Cozy House</h1>
@@ -18,9 +19,9 @@
                 </div>
                 
                 <div class="menu-btn">
-                    <button class="material-icons-outlined">menu</button>
+                    <button id="burger-menu" class="material-icons-outlined">menu</button>
                 </div>
-                <nav>
+                <nav id="navigation">
                     <a href="" class="active" class="nav-link">About the shelter</a>
                     <a href="./pages/pets/index.html" class="nav-link">Our pets</a>
                     <a href="#help" class="nav-link">Help the shelter</a>
@@ -63,31 +64,11 @@
         <section class="friends">
             <h3>Our friends who<br> are looking for a house</h3>
             <div class="slider">
-                <button>&#8592;</button>
+                <button class="slider-btn">&#8592;</button>
                 <div class="slider-field">
-                    <div class="pet-card">
-                        <div class="pet-img">
-                            <img src="./assets/images/pets/pets-katrine.png" alt="Katrine">
-                        </div>
-                        <p>Katrine</p>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pet-card second">
-                        <div class="pet-img">
-                            <img src="./assets/images/pets/pets-jennifer.png" alt="Jenifer">
-                        </div>
-                        <p>Jenifer</p>
-                        <button>Learn more</button>
-                    </div>
-                    <div class="pet-card third">
-                        <div class="pet-img">
-                            <img src="./assets/images/pets/pets-woody.png" alt="Woody">
-                        </div>
-                        <p>Woody</p>
-                        <button>Learn more</button>
-                    </div>
+                    
                 </div>
-                <button>&#8594;</button>
+                <button class="slider-btn">&#8594;</button>
             </div>
             <a href="./pages/pets/index.html"><button>Get to know the rest</button></a>
         </section>
