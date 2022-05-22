@@ -12,7 +12,7 @@ Basic 2-page site adaptive responsive layout from figma with some js functionali
 - burger menu
 
 ##### Use scss preprocessor for styling.
-##### Code in branch shelter-dom.
+##### Project build using webpack.
 
 ## Deploy
 
