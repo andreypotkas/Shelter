@@ -3,939 +3,958 @@
 $header-padding-main: 60px 40px;
 $welcome-padding: 0 40px;
 $section-padding-1280: 80px 40px 100px;
-$color-primary: #F1CDB3;
-$color-light-s: #FAFAFA;
+$color-primary: #f1cdb3;
+$color-light-s: #fafafa;
 $font: Georgia;
-$color-dark-s: #CDCDCD;
-.animation-left-show{
-    position: relative;
-    animation: form-show 1s forwards;
-    @keyframes form-show {
-        from {left: -1500px}
-        to {left: 0}
-     }
+$color-dark-s: #cdcdcd;
+
+// ! SLIDER ANIMATION
+.animation-left-show {
+  position: relative;
+  animation: form-show-left 1s forwards;
+  @keyframes form-show-left {
+    from {
+      left: 1500px;
+    }
+    to {
+      left: 0px;
+    }
+  }
 }
-.animation-left-hide{
-    position: relative;
-    animation: form-hide 1s forwards;
-    @keyframes form-hide {
-        from {left: 0}
-        to {left: -1500px}
-     }
+.animation-left-hide {
+  position: relative;
+  animation: form-hide-left 1s forwards;
+  @keyframes form-hide-left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -1500px;
+    }
+  }
 }
-.animation-right-show{
-    position: relative;
-    animation: form-show 1s forwards;
-    @keyframes form-show {
-        from {right: 1500px}
-        to {right: 0}
-     }
+.animation-right-show {
+  position: relative;
+  animation: form-show 1s forwards;
+  @keyframes form-show {
+    from {
+      right: 1500px;
+    }
+    to {
+      right: 0;
+    }
+  }
 }
-.animation-right-hide{
-    position: relative;
-    animation: form-hide 1s forwards;
-    @keyframes form-hide {
-        from {right: 0}
-        to {right: -1500px}
-     }
+.animation-right-hide {
+  position: relative;
+  animation: form-hide 1s forwards;
+  @keyframes form-hide {
+    from {
+      right: 0;
+    }
+    to {
+      right: -1500px;
+    }
+  }
 }
 
-.pet-card-popup{
-    z-index: 3;
-    position: absolute;
-    max-width: 952px;
-    height: 552px;
+.pet-card-popup {
+  z-index: 3;
+  position: absolute;
+  max-width: 952px;
+  height: 552px;
+  display: flex;
+  flex-direction: row-reverse;
+  .close-card {
+    position: relative;
+    .close-card-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 100%;
+      border: $color-primary 2px solid;
+      background: white;
+      position: absolute;
+      top: -50px;
+      &:hover {
+        background: $color-primary;
+      }
+    }
+  }
+  .card-content {
+    background: white;
+    border-radius: 10px;
     display: flex;
-    flex-direction: row-reverse;
-    .close-card{
-        position: relative;
-        .close-card-btn{
-            width: 52px;
-            height: 52px;
-            border-radius: 100%;
-            border: $color-primary 2px solid;
-            background: white;
-            position: absolute;
-            top: -50px;
-            &:hover{
-                background: $color-primary;
-            }
-        }
+    .card-img {
+      flex: 55% 1 1;
+
+      img {
+        min-width: 100%;
+      }
     }
-    .card-content{
-        background: white;
-        border-radius: 10px;
-        display: flex;
-        .card-img{
-            flex: 55% 1 1;
-            
-            img{
-                min-width: 100%;
-            }
-        }
-        .card-description{
-            padding: 50px 20px 0;
-            flex: 45% 1 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 40px;
-        }
+    .card-description {
+      padding: 50px 20px 0;
+      flex: 45% 1 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 40px;
     }
+  }
 }
-h2,h3,p,h1,body{
-    margin: 0;
-    padding: 0;
+h2,
+h3,
+p,
+h1,
+body {
+  margin: 0;
+  padding: 0;
 }
-h3{
-    font-family: Georgia;
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 45px;
-    letter-spacing: 0.06em;
-    text-align: center;
+h3 {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  text-align: center;
 }
 
-@mixin button($width, $bg ) {
-    width: $width;
-    font-family: Georgia;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.06em;
-    height: 52px;
-    background: $bg;
-    line-height: 22.1px;
-    border-radius: 100px;
-    border: none;
-    &:hover{
-        background: white;
-        border: 3px solid $bg;
-        cursor: pointer;
-    }
+@mixin button($width, $bg) {
+  width: $width;
+  font-family: Georgia;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  height: 52px;
+  background: $bg;
+  line-height: 22.1px;
+  border-radius: 100px;
+  border: none;
+  &:hover {
+    background: white;
+    border: 3px solid $bg;
+    cursor: pointer;
+  }
 }
-header, section, footer{
-    max-width: 1280px;
+header,
+section,
+footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: $section-padding-1280;
+}
+
+.wrapper-header-welcome {
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+    #211f20;
+  .wrapper-bg {
     margin: 0 auto;
-    box-sizing: border-box;
-    padding: $section-padding-1280;
-}
-
-.wrapper-header-welcome{
-    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-    .wrapper-bg{
-        margin: 0 auto;
-        max-width: 1280px;
-    }
-    header{
-        height: 180px;
-        padding: $header-padding-main;
-        display: flex;
-        justify-content: space-between;
-        .header-logo{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            h1{
-                font-family: Georgia;
-                font-size: 32px;
-                font-weight: 400;
-                line-height: 35px;
-                letter-spacing: 0.06em;
-                text-align: left;
-                color: $color-primary;
-            }
-            p{
-                color:$color-light-s;
-                font-family: Arial;
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 15px;
-                letter-spacing: 0.1em;
-                text-align: left;
-                
-            }
-        }
-        .menu-btn{
-            display: none;
-            padding-right: 35px;
-            align-items: center;
-            padding-left: 30px;
-            button{
-                width: 42px;
-                height: 42px;
-                border: none;
-                font-family: 'Material Icons';
-                background: none;
-                color: $color-primary;
-                font-size: 42px;
-                
-            }
-        }
-        nav{
-            display: flex;
-            justify-content: space-between;
-            column-gap: 35px;
-            align-items: center;
-            a{
-                color: $color-light-s;
-                text-decoration: none;
-                font-family: Arial;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0px;
-                text-align: left;
-                &:hover{
-                    border-bottom: 3px solid $color-primary;
-                }
-            }
-            a.active{
-                border-bottom: 3px solid $color-primary;
-            }
-        }
-    }
-    .main{
-        background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-    }
-    .welcome{
-        display: flex;
-        column-gap: 42px;
-        padding: $welcome-padding;
-        .welcome-description{
-            margin-top: 163px;
-            height: 322px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 0;
-            h3{
-                font-family: Georgia;
-                font-size: 44px;
-                font-weight: 400;
-                line-height: 57px;
-                letter-spacing: 0em;
-                text-align: left;
-                color: white;
-                
-            }
-            p{
-                font-size: 15px;
-                color: $color-dark-s;
-                line-height: 24px;
-                font-family: arial;
-                font-weight: 400;
-                margin: 0;
-            }
-            button{
-                @include button(207px, $color-primary);
-                a{
-                    text-decoration: none;
-                }
-            }
-        }
-        .img{
-            width: 698px;
-            height: 728px;
-            background: url('./assets/images/1280/start-screen-puppy.png');
-            flex-shrink: 0;
-         }
-    }
-}
-
-.about{
+    max-width: 1280px;
+  }
+  header {
+    height: 180px;
+    padding: $header-padding-main;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 120px;
-    .about-description{
-        width: 430px;
-        height: 380px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        h3{
-            text-align: left;
-        }
-        p{
-            font-family: Arial;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0px;
-            text-align: left;
-            margin: 0;
-        }
+    justify-content: space-between;
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-family: Georgia;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color: $color-primary;
+      }
+      p {
+        color: $color-light-s;
+        font-family: Arial;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        text-align: left;
+      }
     }
+    .menu-btn {
+      display: none;
+      padding-right: 35px;
+      align-items: center;
+      padding-left: 30px;
+      button {
+        width: 42px;
+        height: 42px;
+        border: none;
+        font-family: 'Material Icons';
+        background: none;
+        color: $color-primary;
+        font-size: 42px;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 35px;
+      align-items: center;
+      a {
+        color: $color-light-s;
+        text-decoration: none;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        &:hover {
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+      a.active {
+        border-bottom: 3px solid $color-primary;
+      }
+    }
+  }
+  .main {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+      #211f20;
+  }
+  .welcome {
+    display: flex;
+    column-gap: 42px;
+    padding: $welcome-padding;
+    .welcome-description {
+      margin-top: 163px;
+      height: 322px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 0;
+      h3 {
+        font-family: Georgia;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 57px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+      }
+      p {
+        font-size: 15px;
+        color: $color-dark-s;
+        line-height: 24px;
+        font-family: arial;
+        font-weight: 400;
+        margin: 0;
+      }
+      button {
+        @include button(207px, $color-primary);
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .img {
+      width: 698px;
+      height: 728px;
+      background: url('./assets/images/1280/start-screen-puppy.png');
+      flex-shrink: 0;
+    }
+  }
 }
 
-.wrapper-friends{
-    background: #F6F6F6;
-    .friends{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        row-gap: 60px;
-        h3{
-            text-align: center;
-        }
-        .slider{
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            column-gap: 53px;
-            align-items: center;
-            button{
-                width: 52px;
-                height: 52px;
-                border-radius: 100%;
-                border: solid 2px $color-primary;
-                flex-shrink: 0;
-            }
-            .slider-field{
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                .pet-card{
-                    height: 435px;
-                    background: #FAFAFA;
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 27px;
-                    align-items: center;
-                    &:hover{
-                        button{
-                            background: #F1CDB3;
-                        }
-                        cursor: pointer;
-                    }
-                    p{
-                        font-family: Georgia;
-                        font-size: 20px;
-                        font-weight: 400;
-                        line-height: 23px;
-                        letter-spacing: 0.06em;
-                        text-align: center;
-                    }
-                    button{
-                        @include button(187px, white);
-                        border: 2px solid $color-primary;
-                        &:hover{
-                            border: 2px solid $color-primary;
-                            background: #F1CDB3;
-                        }
-                    }
-                }
-            }
-            
-        }
-        button{
-            @include button(261px, $color-primary)
-        }
-    }
-}
-
-.help{
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 120px;
+  .about-description {
+    width: 430px;
+    height: 380px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    h3 {
+      text-align: left;
+    }
+    p {
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin: 0;
+    }
+  }
+}
+
+.wrapper-friends {
+  background: #f6f6f6;
+  .friends {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     row-gap: 60px;
-    .help-container{
+    h3 {
+      text-align: center;
+    }
+    .slider {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      column-gap: 53px;
+      align-items: center;
+      button {
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        border: solid 2px $color-primary;
+        flex-shrink: 0;
+      }
+      .slider-field {
         display: flex;
-        column-gap: 120px;
-        row-gap: 55px;
-        flex-wrap: wrap;
-        justify-content: center;
-        p{
-            margin-top: 25px;
+        width: 100%;
+        justify-content: space-between;
+        .pet-card {
+          height: 435px;
+          background: #fafafa;
+          display: flex;
+          flex-direction: column;
+          row-gap: 27px;
+          align-items: center;
+          &:hover {
+            button {
+              background: #f1cdb3;
+            }
+            cursor: pointer;
+          }
+          p {
             font-family: Georgia;
             font-size: 20px;
             font-weight: 400;
             line-height: 23px;
             letter-spacing: 0.06em;
             text-align: center;
+          }
+          button {
+            @include button(187px, white);
+            border: 2px solid $color-primary;
+            &:hover {
+              border: 2px solid $color-primary;
+              background: #f1cdb3;
+            }
+          }
         }
-        .help-item{
-            text-align: center;
-        }
+      }
     }
+    button {
+      @include button(261px, $color-primary);
+    }
+  }
 }
 
-.wrapper-donation{
-    background: #F6F6F6;
-    section{
-        display: flex;
-        justify-content: center;
-        column-gap: 10px;
-        .donation-description{
-            height: 282px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            h3{
-                text-align: left;
-            }
-            p{
-                font-family: Georgia;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 17px;
-                letter-spacing: 0.06em;
-                text-align: left;
-            }
-            .credit-card-description{
-                font-family: Arial;
-                font-size: 12px;
-                font-style: italic;
-                font-weight: 400;
-                line-height: 18px;
-                letter-spacing: 0px;
-                text-align: left;
-                color: #B2B2B2;
-            }
-            .credit-card{
-                background: #F1CDB3;
-                border-radius: 9px;
-                height: 43px;
-                display: flex;
-                &:hover{
-                   background:rgb(238, 198, 170);
-                }
-                .credit-card-icon{
-                    font-family: 'Material Icons';
-                    font-size: 32px;
-                    line-height: 42px;
-                    padding: 0 10px;
-                }
-                .credit-card-number{
-                    font-family: Georgia;
-                    font-size: 20px;
-                    font-weight: 400;
-                    letter-spacing: 0.06em;
-                    text-align: left;
-                    line-height: 43px;
-                }
-            }
-        }
+.help {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  .help-container {
+    display: flex;
+    column-gap: 120px;
+    row-gap: 55px;
+    flex-wrap: wrap;
+    justify-content: center;
+    p {
+      margin-top: 25px;
+      font-family: Georgia;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0.06em;
+      text-align: center;
     }
+    .help-item {
+      text-align: center;
+    }
+  }
 }
 
-.wrapper-footer{
-    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-    footer{
-        background-repeat: no-repeat;
-        padding: 40px 40px 0;
+.wrapper-donation {
+  background: #f6f6f6;
+  section {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    .donation-description {
+      height: 282px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        text-align: left;
+      }
+      p {
+        font-family: Georgia;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.06em;
+        text-align: left;
+      }
+      .credit-card-description {
+        font-family: Arial;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #b2b2b2;
+      }
+      .credit-card {
+        background: #f1cdb3;
+        border-radius: 9px;
+        height: 43px;
         display: flex;
-        justify-content: space-between;
-        a{
-            text-decoration: none;
+        &:hover {
+          background: rgb(238, 198, 170);
         }
-            h3{
-                color:white;
-                text-align: left;
-            }
-            p{
-                color: $color-primary;
-                line-height: 32px;
-                font-family: Georgia;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 23px;
-                letter-spacing: 0.06em;
-                text-align: left;
-            }
-            span{
-                font-family: 'Material Icons';
-                font-size: 32px;
-            }
-            .phone-email-contacts, .adress{
-                height: 234px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                margin-top: 16px;
-            }
-            .email-wrapper, .phone-wrapper, .address-wrapper{
-                display: flex;
-                flex-direction: row;
-                column-gap: 20px;
-            }
-            .address-wrapper{
-                img{
-                    width: 22px;
-                    height: 32px;
-                }
-            }
-            .img-container{
-                position: relative;
-                img{
-                    position: relative;
-                    top: 4px;
-                }
-            }
+        .credit-card-icon {
+          font-family: 'Material Icons';
+          font-size: 32px;
+          line-height: 42px;
+          padding: 0 10px;
+        }
+        .credit-card-number {
+          font-family: Georgia;
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          text-align: left;
+          line-height: 43px;
+        }
+      }
     }
+  }
+}
+
+.wrapper-footer {
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+    #211f20;
+  footer {
+    background-repeat: no-repeat;
+    padding: 40px 40px 0;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+    }
+    h3 {
+      color: white;
+      text-align: left;
+    }
+    p {
+      color: $color-primary;
+      line-height: 32px;
+      font-family: Georgia;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0.06em;
+      text-align: left;
+    }
+    span {
+      font-family: 'Material Icons';
+      font-size: 32px;
+    }
+    .phone-email-contacts,
+    .adress {
+      height: 234px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+    .email-wrapper,
+    .phone-wrapper,
+    .address-wrapper {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+    }
+    .address-wrapper {
+      img {
+        width: 22px;
+        height: 32px;
+      }
+    }
+    .img-container {
+      position: relative;
+      img {
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1280px) {
-    .pet-card-popup{
-        width: 682px;
-        height: 410px;
-        .card-content{
-            .card-description{
-                row-gap: 10px;
-            }
+  .pet-card-popup {
+    width: 682px;
+    height: 410px;
+    .card-content {
+      .card-description {
+        row-gap: 10px;
+      }
+    }
+  }
+  section {
+    padding: 80px 30px 100px;
+  }
+  .wrapper-header-welcome {
+    header {
+      height: 120px;
+      padding: 30px;
+    }
+    .welcome {
+      flex-direction: column;
+      row-gap: 100px;
+      padding: 30px 100px 0;
+      position: relative;
+      align-items: center;
+      .welcome-description {
+        max-width: 460px;
+        padding: 0 55px;
+        margin-top: 0;
+        a {
+          text-align: center;
         }
+      }
+      .img {
+        max-width: 569px;
+        max-height: 593px;
+        background: url('./assets/images/1280/start-screen-puppy.png');
+        flex-shrink: 1;
+        background-size: contain;
+        position: relative;
+        left: 70px;
+      }
     }
-    section{
-        padding: 80px 30px 100px;
-    }
-    .wrapper-header-welcome{
-        header{
-            height: 120px;
-            padding: 30px;
-        }
-        .welcome{
-            flex-direction: column;
-            row-gap: 100px;
-            padding: 30px 100px 0;
-            position: relative;
-            align-items: center;
-            .welcome-description{
-                max-width: 460px;
-                padding: 0 55px;
-                margin-top: 0;
-                a{
-                    text-align: center;
-                }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 80px;
+  }
+
+  .wrapper-friends {
+    background: #f6f6f6;
+    .friends {
+      .slider {
+        column-gap: 12px;
+        .slider-field {
+          justify-content: center;
+          column-gap: 40px;
+          .pet-card {
+            &.third {
+              display: none;
             }
-            .img{
-                max-width: 569px;
-                max-height: 593px;
-                background: url('./assets/images/1280/start-screen-puppy.png');
-                flex-shrink: 1;
-                background-size: contain;
-                position: relative;
-                left: 70px;
-             }
+          }
         }
+      }
+      button {
+        @include button(261px, $color-primary);
+      }
     }
-    
-    .about{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        row-gap: 80px;
+  }
+
+  .help {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    .help-container {
+      column-gap: 60px;
+      row-gap: 55px;
+      flex-wrap: wrap;
+      .help-item {
+        text-align: center;
+        width: 170px;
+      }
     }
-    
-    .wrapper-friends{
-        background: #F6F6F6;
-        .friends{
-            .slider{
-                column-gap: 12px;
-                .slider-field{
-                    justify-content: center;
-                    column-gap: 40px;
-                    .pet-card{
-                        &.third{
-                            display: none;
-                        }
-                    }
-                }
-                
-            }
-            button{
-                @include button(261px, $color-primary)
-            }
-        }
-    }
-    
-    .help{
-        display: flex;
+  }
+
+  .wrapper-donation {
+    section {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      row-gap: 60px;
+      padding-bottom: 96px;
+      .donation-description {
+        height: 282px;
+        flex-shrink: 0;
         flex-direction: column;
-        row-gap: 60px;
-        .help-container{
-            column-gap: 60px;
-            row-gap: 55px;
-            flex-wrap: wrap;
-            .help-item{
-                text-align: center;
-                width: 170px;
-            }
+        text-align: left;
+        h3 {
+          text-align: left;
         }
+      }
     }
-    
-    .wrapper-donation{
-        section{
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: center;
-            row-gap: 60px;
-            padding-bottom: 96px;
-            .donation-description{
-                height: 282px;
-                flex-shrink: 0;
-                flex-direction: column;
-                text-align: left;
-                h3{
-                    text-align: left;
-                }
-            }
-        }
+  }
+
+  .wrapper-footer {
+    footer {
+      padding: 30px 40px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 60px;
+      row-gap: 65px;
+      .phone-email-contacts,
+      .adress {
+        height: 234px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+      }
+      .footer-foto {
+        flex: 100% 1 1;
+      }
     }
-    
-    .wrapper-footer{
-        footer{
-            padding: 30px 40px 0;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 60px;
-            row-gap: 65px;
-                .phone-email-contacts, .adress{
-                    height: 234px;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    margin-top: 0;
-                }
-                .footer-foto{
-                    flex: 100% 1 1;
-                }
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .pet-card-popup{
-        width: 270px;
-        .card-content{
-            .card-img{
-                display:none;
-            }
-            .card-description{
-                row-gap: 10px;
-            }
-        }
+  .pet-card-popup {
+    width: 270px;
+    .card-content {
+      .card-img {
+        display: none;
+      }
+      .card-description {
+        row-gap: 10px;
+      }
     }
-    section{
-        padding: 42px 10px;
-    }
-    h3{
-        font-size: 25px;
-        line-height: 32px;
-        letter-spacing: 0.06em;
-    }
-    .wrapper-header-welcome{
-        header{
-            height: 150px;
-            padding: 30px 0 60px 10px;
-            .header-logo{
-                z-index: 3;
-            }
-            .menu-btn{
-                display: flex;
-                z-index: 3;
-                button{
-                    transition: transform 1s;
-                    padding: 0;
-                }
-            }
-            nav{
-                padding-top: 150px;
-                background: #292929;
-                height: 100%;
-                flex-direction: column;
-                position: absolute;
-                z-index: 2;
-                top: -120%;
-                right: 0;
-                width: 320px;
-                transition: 1s;
-            }
-            .show-nav{
-                display: flex;
-                top: 0;
-                justify-content: start !important;
-                row-gap: 30px;
-            }
-
-            .burger-rotate{
-                transition: transform 1s;
-                transform: rotate(90deg);
-            }
+  }
+  section {
+    padding: 42px 10px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+  }
+  .wrapper-header-welcome {
+    header {
+      height: 150px;
+      padding: 30px 0 60px 10px;
+      .header-logo {
+        z-index: 3;
+      }
+      .menu-btn {
+        display: flex;
+        z-index: 3;
+        button {
+          transition: transform 1s;
+          padding: 0;
         }
-    
-        .welcome{
-            display: flex;
-            flex-direction: column;
-            row-gap: 105px;
-            padding: 0px 10px 0;
-            align-items: center;
-            position: relative;
-            .welcome-description{
-                width: 300px;
-                padding: 0;
-                margin-top: 0;
-                row-gap: 42px;
-                height: auto;
-                a{
-                    text-align: center;
-                }
-                h3{
-                    font-family: Georgia;
-                    font-size: 25px;
-                    font-weight: 400;
-                    line-height: 32px;
-                    letter-spacing: 0.06em;
-                    text-align: center;
-                }
-                p{
-                    text-align: center;
-                }
-            }
-            .img{
-                max-width: 260px;
-                height: 271px;
-                background: url('./assets/images/1280/start-screen-puppy.png');
-                flex-shrink: 0;
-                background-size: contain;
-                position: relative;
-                left: 20px;
-             }
-        }
-    }
-    
-    .about{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        row-gap: 42px;
-        .about-img{
-            img{
-                width: 260px;
-            }
-        }
-        .about-description{
-            row-gap: 22px;
-            width: auto;
-            height: auto;
-            h3{
-                text-align: center;
-            }
-            p{
-                padding: 0 15px;
-                text-align: justify;
-            }
-            
-        }
-    }
-    
-    .wrapper-friends{
-        .friends{
-            row-gap: 42px;
-            h3{
-                text-align: center;
-            }
-            .slider{
-                column-gap: 80px;
-                row-gap: 20px;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                    button{
-                        order: 2;
-                    }
-                .slider-field{
-                    flex: 100% 1 1;
-                    order: 1;
-                    .pet-card{
-                        
-                        &.third, &.second{
-                            display: none;
-                        }
-                    }
-                    
-                }
-                
-            }
-            button{
-                @include button(261px, $color-primary)
-            }
-        }
-    }
-    
-    .help{
+      }
+      nav {
+        padding-top: 150px;
+        background: #292929;
+        height: 100%;
         flex-direction: column;
-        row-gap: 42px;
-        .help-container{
-            column-gap: 30px;
-            row-gap: 30px;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            .help-item{
-                text-align: center;
-                width: 130px;
-                height: 87px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                img{
-                    width: 50px;
-                    height: 50px;
-                }
-                p{
-                    font-family: Georgia;
-                    font-size: 15px;
-                    font-weight: 400;
-                    line-height: 17px;
-                    letter-spacing: 0.06em;
-                    text-align: center;
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-    
-    .wrapper-donation{
-        background: #F6F6F6;
-        section{
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: center;
-            row-gap: 42px;
-            padding-bottom: 38px;
-            
-            .img-container{
-                img{
-                    width: 260px;
-                }
-            }
-            .donation-description{
-                height: 282px;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                row-gap: 20px;
-                align-items: center;
-                .credit-card{
-                    display: flex;
-                    align-items: center;
-                    width: 281px;
-                    a{
-                        display: flex;
-                        align-items: center;
-                        padding: 0 5px;
-                        .credit-card-number{//styleName: h5;
-                            font-family: Georgia;
-                            font-size: 15px;
-                            font-weight: 400;
-                            line-height: 17px;
-                            letter-spacing: 0.06em;
-                            text-align: center;
-                        }
-                    }
-                    
-                }
-                h3{
-                    font-family: Georgia;
-                    font-size: 25px;
-                    font-weight: 400;
-                    line-height: 32px;
-                    letter-spacing: 0.06em;
-                    text-align: center;
-                }
-                p{
-                    font-family: Georgia;
-                    font-size: 15px;
-                    font-weight: 400;
-                    line-height: 24px;
-                    letter-spacing: 0px;
-                    text-align: center;
-                }
-                .credit-card-description{
-                    font-family: Arial;
-                    font-size: 12px;
-                    font-style: italic;
-                    font-weight: 400;
-                    line-height: 18px;
-                    letter-spacing: 0px;
-                    text-align: justified;
-                    br{
-                        display: none;
-                    }
-                    
-                }
-                
-            }
-            
-        }
-    }
-    
-    .wrapper-footer{
-        
-        footer{
-            padding: 30px 10px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            column-gap: 60px;
-            row-gap: 40px;
-
-            h3{
-                text-align: center;
-                br{
-                    display: none;
-                }
-            }
-            .phone-email-contacts, .adress{
-                flex-basis: 100%;
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                row-gap: 40px;
-                align-items: center;
-                margin-top: 0;
-                a{
-                    p{
-                    font-family: Georgia;
-                    font-size: 20px;
-                    font-weight: 400;
-                    line-height: 23px;
-                    letter-spacing: 0.06em;
-                    text-align: left;
-                    }
-                }
-            }
-            .adress{
-                h3{
-                    width: 270px;
-                    text-align: center;
-                }
-                .address-wrapper{
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    column-gap: 20px;
-                }
-            }
-            .img-container{
-                text-align: center;
-                .footer-foto{
-                    flex: 100% 1 1;
-                    width: 260px;
-                }
-            }    
-        }
-    }
-}
-
-.stop-scroll{
-        min-width: 100vw;
-        min-height: 100%;
-        overflow: hidden;
-        background: rgba(41, 41, 41, 0.6);
-        z-index: 2;
         position: absolute;
+        z-index: 2;
+        top: -120%;
+        right: 0;
+        width: 320px;
+        transition: 1s;
+      }
+      .show-nav {
+        display: flex;
+        top: 0;
+        justify-content: start !important;
+        row-gap: 30px;
+      }
+
+      .burger-rotate {
+        transition: transform 1s;
+        transform: rotate(90deg);
+      }
+    }
+
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      row-gap: 105px;
+      padding: 0px 10px 0;
+      align-items: center;
+      position: relative;
+      .welcome-description {
+        width: 300px;
+        padding: 0;
+        margin-top: 0;
+        row-gap: 42px;
+        height: auto;
+        a {
+          text-align: center;
+        }
+        h3 {
+          font-family: Georgia;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: 0.06em;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .img {
+        max-width: 260px;
+        height: 271px;
+        background: url('./assets/images/1280/start-screen-puppy.png');
+        flex-shrink: 0;
+        background-size: contain;
+        position: relative;
+        left: 20px;
+      }
+    }
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 42px;
+    .about-img {
+      img {
+        width: 260px;
+      }
+    }
+    .about-description {
+      row-gap: 22px;
+      width: auto;
+      height: auto;
+      h3 {
+        text-align: center;
+      }
+      p {
+        padding: 0 15px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .wrapper-friends {
+    .friends {
+      row-gap: 42px;
+      h3 {
+        text-align: center;
+      }
+      .slider {
+        column-gap: 80px;
+        row-gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        button {
+          order: 2;
+        }
+        .slider-field {
+          flex: 100% 1 1;
+          order: 1;
+          .pet-card {
+            &.third,
+            &.second {
+              display: none;
+            }
+          }
+        }
+      }
+      button {
+        @include button(261px, $color-primary);
+      }
+    }
+  }
+
+  .help {
+    flex-direction: column;
+    row-gap: 42px;
+    .help-container {
+      column-gap: 30px;
+      row-gap: 30px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .help-item {
+        text-align: center;
+        width: 130px;
+        height: 87px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        p {
+          font-family: Georgia;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 17px;
+          letter-spacing: 0.06em;
+          text-align: center;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .wrapper-donation {
+    background: #f6f6f6;
+    section {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      row-gap: 42px;
+      padding-bottom: 38px;
+
+      .img-container {
+        img {
+          width: 260px;
+        }
+      }
+      .donation-description {
+        height: 282px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 20px;
+        align-items: center;
+        .credit-card {
+          display: flex;
+          align-items: center;
+          width: 281px;
+          a {
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            .credit-card-number {
+              //styleName: h5;
+              font-family: Georgia;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 17px;
+              letter-spacing: 0.06em;
+              text-align: center;
+            }
+          }
+        }
+        h3 {
+          font-family: Georgia;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: 0.06em;
+          text-align: center;
+        }
+        p {
+          font-family: Georgia;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0px;
+          text-align: center;
+        }
+        .credit-card-description {
+          font-family: Arial;
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0px;
+          text-align: justified;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-footer {
+    footer {
+      padding: 30px 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      column-gap: 60px;
+      row-gap: 40px;
+
+      h3 {
+        text-align: center;
+        br {
+          display: none;
+        }
+      }
+      .phone-email-contacts,
+      .adress {
+        flex-basis: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: center;
+        margin-top: 0;
+        a {
+          p {
+            font-family: Georgia;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0.06em;
+            text-align: left;
+          }
+        }
+      }
+      .adress {
+        h3 {
+          width: 270px;
+          text-align: center;
+        }
+        .address-wrapper {
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          column-gap: 20px;
+        }
+      }
+      .img-container {
+        text-align: center;
+        .footer-foto {
+          flex: 100% 1 1;
+          width: 260px;
+        }
+      }
+    }
+  }
 }
 
+.stop-scroll {
+  min-width: 100vw;
+  min-height: 100%;
+  overflow: hidden;
+  background: rgba(41, 41, 41, 0.6);
+  z-index: 2;
+  position: absolute;
+}
